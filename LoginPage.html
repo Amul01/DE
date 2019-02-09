@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>M.A.C.</title>
+    <style>
+        h3,p,table{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h3 align="center">Welcome to M.A.C.</h3>
+    <table align="center" border="1">
+        <tr>
+            <td>Username: </td>
+            <td><input type="text" id="username" /></td>
+        </tr>
+        <tr>
+            <td>Password: </td>
+            <td><input type="password" id="pw" /></td>
+        </tr>
+        <tr align="center"><td><button onclick="check()">Login</button></td></tr>
+        <tr>
+            <td colspan="2"><a href="SignUp.html">Not registered? Sign up.</a></td>
+        </tr>
+    </table>
+    <h3 id="demo"></h3>
+    <h3 id="demo1"></h3>
+    <script type="text/javascript">
+        function check() {
+            var n = document.getElementById("username").value;
+            var p = document.getElementById("pw").value;
+            document.getElementById("demo").innerHTML = n;
+            document.getElementById("demo1").innerHTML = p
+        }
+    </script>
+</body>
+</html>

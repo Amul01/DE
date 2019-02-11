@@ -13,12 +13,27 @@
 <body>
     <div align="center">
         <form>
-            Name: <input type="text" name="name" /></td>
-            Password: <input type="password" name="pw" /></td>
-            Confirm Password: <input type="password" name="cpw" /></td>
-            E-mail Address: <input type="text" name="eid" /></td>
-            <input type="submit" value="Submit" /></td>
+            Name:             <input type="text" id="name" /><br />
+            Password:         <input type="password" id="pw" /><br />
+            Confirm Password: <input type="password" id="cpw" /><br />
+            E-mail Address:   <input type="text" id="emailid" /><br />
+            <input type="submit" value="Submit" onclick="check()" /><br />
+            <button onclick="check()">Submit</button>
         </form>
     </div>
+    <h2 id="display_message"></h2>
+    <script>
+        function check() {
+            var n = document.getElementById("name").value;
+            var enr = document.getElementById("enr").value;
+            var pw = document.getElementById("pw").value;
+            var cpw = document.getElementById("cpw").value;
+            var eid = document.getElementById("emailid").value;
+
+            if ((pw != cpw) || n.length == 0) {
+                document.getElementById("display_message").innerHTML = "Passwords don't match";
+            }
+        }
+    </script>
 </body>
 </html>

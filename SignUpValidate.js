@@ -1,11 +1,14 @@
 function check() {
-    var n = document.getElementById("name").value;
-    var enr = document.getElementById("enr").value;
-    var pw = document.getElementById("pw").value;
-    var cpw = document.getElementById("cpw").value;
-    var eid = document.getElementById("emailid").value;
-
-    if ((pw != cpw) || n.length == 0) {
+    var n = document.getElementByName("name").value;
+    var enr = document.getElementByName("enr").value;
+    var pw = document.getElementByName("pw").value;
+    var cpw = document.getElementByName("cpw").value;
+    var eid = document.getElementByName("emailid").value;
+    document.getElementById("pass").innerHTML = n;
+    if ((pw != cpw)) {
         document.getElementById("display_message").innerHTML = "Passwords don't match";
+    }
+    else {
+        document.getElementById("display_message").innerHTML = "Passwords matched";
     }
 }

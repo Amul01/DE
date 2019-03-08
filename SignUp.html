@@ -8,45 +8,23 @@
         form {
             margin: 0 auto;
         }
-
-        div {
-            border: 1px solid red;
-        }
     </style>
-    
-    <script type="text/javascript">
-        function check() {
-            var n = document.getElementByName("name").value;
-            var enr = document.getElementByName("enr");
-            var pw = document.getElementByName("pw");
-            var cpw = document.getElementByName("cpw");
-            var eid = document.getElementById("emailid").value;
-            document.getElementById("pass").innerHTML = n;
-
-            document.getElementById("pass").innerHTML = pw;
-            if (pw.equals(cpw)) {
-                document.getElementById("display_message").innerHTML = "Passwords match";
-                document.write("Password matched", pw);
-            }
-            else {
-                document.getElementById("display_message").innerHTML = "Passwords don't match";
-            }
-        }
-    </script>
+    <script src="SignUpValidate.js"></script>
 </head>
 <body>
     <div align="center">
-        <form>
-            Name:             <input type="text" name="name" /><br />
+        <form name="frm">
+            Name:             <input type="text" name="name" id="name" /><br />
+            Enrollment No.:   <input type="text" name="enr" /><br />
             Password:         <input type="password" name="pw" /><br />
             Confirm Password: <input type="password" name="cpw" /><br />
-            E-mail Address:   <input type="text" name="emailid" /><br />
-            <!--<input type="button" value="Submit" onclick="check()"/><br />-->
-            <button onclick="check()">Submit</button>
+            E-mail Address:   <input type="email". name="emailid" /><br />
+            <input type="button" value="Submit" name="Submit" onclick="check()" /><br />
+            <!--<button onclick="check()">Submit</button>-->
         </form>
     </div>
     <h2 id="display_message"></h2>
     <h2 id="pass"></h2>
-    <script src="SignUpValidate.js"></script>
+   
 </body>
 </html>
